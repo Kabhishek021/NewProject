@@ -1,0 +1,5 @@
+#  data ingestion
+ step1 constant(define variable)--step2 configuartion file( file connection)--step3 data ingestion
+ 
+# data transformation 
+constant --> Confgiuration file (connecting file  ) --> data transformation --helper function(utilis) --data transformation
