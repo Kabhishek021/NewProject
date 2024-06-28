@@ -59,7 +59,7 @@ class Feature_Engineering(BaseEstimator, TransformerMixin):
             raise CustomException(e,sys) from e
 
 @dataclass 
-class DataTransformationConfig():
+class DataTransformationConfig:
     proccessed_obj_file_path = PREPROCESSING_OBJ_FILE
     transform_train_path = TRANSFORM_TRAIN_FILE_PATH
     transform_test_path = TRANSFORM_TEST_FILE_PATH
@@ -174,8 +174,8 @@ class DataTransformation:
                      obj = fe_obj)
             
             return(train_arr,
-                   test_arr,
-                   self.data_transformation_config.proccessed_obj_file_path)
+                   test_arr
+                   )
         
         except Exception as e:
             raise CustomException( e,sys)

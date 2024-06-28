@@ -3,3 +3,10 @@
  
 # data transformation 
 constant --> Confgiuration file (connecting file  ) --> data transformation --helper function(utilis) --data transformation
+
+
+# Model training 
+constant
+configuration 
+modl training
+utils file (helper function)

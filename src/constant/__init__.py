@@ -41,3 +41,10 @@ TRANSFORM_TEST_DIR_KEY= 'test.csv'
 #artifact--> data_transformation / processor -> processor.pkl and transofmration-> train.csv  and test.csv
 
 
+####################################################
+
+MODEL_TRAINER_KEY = 'model_trainer'
+MODEL_OBJECT ='model.pkl'
+
+
+# artifact /model_trainr /model.pkl

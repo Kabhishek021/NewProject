@@ -10,6 +10,8 @@ from src.logger import logging
 from src.exception import CustomException
 from src.components.data_transformation import DataTransformation,DataTransformationConfig
 
+from src.components.model_trainer import ModelTrainer
+
 # Define configuration (1)  :define raw data pah/train file path / test file path 
 class DataIngestionconfig:
 
@@ -52,6 +54,16 @@ class DataIngestion:
         except Exception as e:
             raise CustomException( e, sys)
 
+# if __name__ =='__main__':
+#     obj = DataIngestion()
+#     train_data_path ,test_data_path=obj.initiate_data_ingestion()
+
+
+#     data_transformation =DataTransformation()
+#     #train_arr and test_arr calling hee
+#     train_arr ,test_arr = data_transformation.inititate_data_transformation(train_data_path ,test_data_path)
+
+#model trainning 
 if __name__ =='__main__':
     obj = DataIngestion()
     train_data_path ,test_data_path=obj.initiate_data_ingestion()
@@ -60,3 +72,7 @@ if __name__ =='__main__':
     data_transformation =DataTransformation()
     #train_arr and test_arr calling hee
     train_arr ,test_arr = data_transformation.inititate_data_transformation(train_data_path ,test_data_path)
+
+    # model trainer
+    model_trainer = ModelTrainer()
+    print(model_trainer.intitate_model_trainning(train_arr ,test_arr))  
